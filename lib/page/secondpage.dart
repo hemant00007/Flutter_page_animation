@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 class SecondPage extends StatefulWidget {
   const SecondPage({Key? key}) : super(key: key);
 
@@ -11,8 +13,11 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.cyan,
-        title: Text("second page"),
+        backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+      ),
+      backgroundColor: Theme.of(context).backgroundColor,
+      body: Center(
+        child: Text("This is for testing purpose"),
       ),
     );
   }
